@@ -1,3 +1,6 @@
+// ==UserScript==
+// @name         Video popout
+// @namespace    berlin.sebastian@gmail.com
 // @version      0.1
 // @description  Popout video chat
 // @author       Sebastian Berlin
@@ -12,8 +15,10 @@
 
     $("<button>")
         .text("Popout video")
+        .addClass("btn")
+        .css("float", "unset")
         .click(popoutVideo)
-        .insertAfter("#exitroll20game");
+        .insertAfter("#mysettings .content p:first-of-type");
 
     function popoutVideo() {
         let $video = $("#avatarContainer");
